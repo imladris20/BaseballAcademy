@@ -10,7 +10,7 @@ namespace BaseballAcademy.Class
         public Player(string name, int backNumber, int position, int power, int speed)
         {
             Name = name;
-            Position = position;
+            _position = position;
             Power = power;
             Speed = speed;
             _backNumber = backNumber;
@@ -18,7 +18,10 @@ namespace BaseballAcademy.Class
 
         public string? Name { get; set; }
 
-        public int Position { get; set; }
+        public int Position
+        {
+            get { return _position; }
+        }
 
         public int Power { get; set; }
 
@@ -29,7 +32,9 @@ namespace BaseballAcademy.Class
             get { return _backNumber; }
         }
 
-        private readonly int _backNumber;
+        private int _backNumber;
+
+        private int _position;
 
         public void Introduce()
         {
@@ -37,6 +42,11 @@ namespace BaseballAcademy.Class
             Console.WriteLine($"My back number is {BackNumber}.");
             Console.WriteLine($"I play as {Position}.");
             Console.WriteLine($"My power is {Power} and my speed is {Speed}.");
+        }
+
+        public void ChangePosition(int newPosition)
+        {
+            _position = newPosition;
         }
     }
 }

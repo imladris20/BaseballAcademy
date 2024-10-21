@@ -8,8 +8,15 @@ class Program
     {
         Console.WriteLine("Hello, BaseballAcademy! \n");
 
-        Player player = new Player("Po-Lien", 29, 1, 70, 75);
+        Player cardsfan = new Player("Po-Lien", 29, 1, 70, 75);
 
-        player.Introduce();
+        cardsfan.Introduce();
+        
+        Console.WriteLine($"{cardsfan.Position}");
+
+        cardsfan.ChangePosition(8);
+
+        Console.WriteLine($"{cardsfan.Position}");
+
     }
 }
