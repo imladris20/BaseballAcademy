@@ -7,17 +7,22 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, BaseballAcademy! \n");
+        Console.WriteLine();
+        Console.WriteLine("Welcome to BaseballAcademy! \n");
 
-        Player cardsfan = new Player("Po-Lien", 29, BaseballPosition.Pitcher, 70, 75);
+        Pitcher lpl = new Pitcher("Po-Lien, Lin", 29);
+        Infielder ytl = new Infielder("Yin Tai, Lai", 31, BaseballPosition.FirstBase);
 
-        cardsfan.Introduce();
+        lpl.Introduce();
+        Console.WriteLine();
 
-        Console.WriteLine($"{cardsfan.Position}");
+        ytl.Introduce();
+        Console.WriteLine();
 
-        cardsfan.ChangePosition(BaseballPosition.CenterField);
+        lpl.Pitch();
+        Console.WriteLine();
 
-        Console.WriteLine($"{cardsfan.Position}");
-
+        ytl.Field();
+        Console.WriteLine();
     }
 }
