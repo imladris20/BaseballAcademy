@@ -6,40 +6,57 @@ using BaseballAcademy.Enum;
 
 namespace BaseballAcademy.Class
 {
+    /// <summary>
+    /// 球員
+    /// </summary>
     public abstract class Player
     {
+        /// <summary>
+        /// 建構子
+        /// </summary>
+        /// <param name="name">姓名</param>
+        /// <param name="backNumber">背號</param>
+        /// <param name="position">守備位置</param>
         public Player(string name, int backNumber, BaseballPosition position)
         {
             Name = name;
-            _position = position;
-            _backNumber = backNumber;
+            BackNumber = backNumber;
+            Position = position;
         }
 
-        public string? Name { get; set; }
+        /// <summary>
+        /// 姓名
+        /// </summary>
+        public string? Name;
 
-        public BaseballPosition Position
+        /// <summary>
+        /// 背號
+        /// </summary>
+        public int BackNumber;
+
+        /// <summary>
+        /// 守備位置
+        /// </summary>
+        public BaseballPosition Position { get; private set; }
+
+        /// <summary>
+        /// 更新守位
+        /// </summary>
+        /// <param name="newPosition">新的守備位置</param>
+        public void ChangePosition(BaseballPosition newPosition)
         {
-            get { return _position; }
+            Position = newPosition;
         }
 
-        public int BackNumber
-        {
-            get { return _backNumber; }
-        }
-
-        private int _backNumber;
-
-        private BaseballPosition _position;
-
+        /// <summary>
+        /// 自我介紹，講姓名跟背號
+        /// </summary>
         public virtual void Introduce()
         {
             Console.WriteLine($"My name is {Name}.");
             Console.WriteLine($"My back number is {BackNumber}.");
         }
 
-        public void ChangePosition(BaseballPosition newPosition)
-        {
-            _position = newPosition;
-        }
+
     }
 }

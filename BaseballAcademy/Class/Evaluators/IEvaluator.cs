@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 
 namespace BaseballAcademy.Class.Evaluators
 {
-    public interface IEvaluator
+    /// <summary>
+    /// 守備單位要有評估動作
+    /// </summary>
+    public interface IEvaluator<T> where T : Player
     {
-        bool Evaluate(Player player);
+        bool Evaluate(T player);
     }
 }

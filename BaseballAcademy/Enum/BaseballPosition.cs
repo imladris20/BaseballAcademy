@@ -1,5 +1,8 @@
 namespace BaseballAcademy.Enum
 {
+    /// <summary>
+    /// 守備位置enum，與慣用代號符合
+    /// </summary>
     public enum BaseballPosition
     {
         Pitcher = 1,

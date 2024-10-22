@@ -13,13 +13,12 @@ class Program
 
         CertificationAgency agency = new CertificationAgency();
 
-        Pitcher lpl = new Pitcher("Po-Lien, Lin", 29);
+        var lpl = new Pitcher("Po-Lien, Lin", 29);
         lpl.Spinrate = 2000;
         lpl.Velocity = 92.7;
 
-        Infielder ytl = new Infielder("Yin Tai, Lai", 31, BaseballPosition.FirstBase);
+        var ytl = new Infielder("Yin Tai, Lai", 31, BaseballPosition.FirstBase);
         ytl.FieldSpeed = 84;
-
 
         lpl.Introduce();
         Console.WriteLine();

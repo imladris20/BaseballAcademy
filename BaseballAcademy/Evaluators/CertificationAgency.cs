@@ -7,11 +7,26 @@ using BaseballAcademy.Class.Evaluators;
 
 namespace BaseballAcademy.Evaluators
 {
+    /// <summary>
+    /// 職業球員認證機構
+    /// </summary>
     public class CertificationAgency
     {
+        /// <summary>
+        /// 認證守備速度的單位
+        /// </summary>
         private FieldSpeedEvaluator fieldSpeedEvaluator = new FieldSpeedEvaluator();
+
+        /// <summary>
+        /// 認證投球能力的單位
+        /// </summary>
         private PitchingEvaluator pitchingEvaluator = new PitchingEvaluator();
 
+        /// <summary>
+        /// 審核能力
+        /// </summary>
+        /// <param name="player">球員</param>
+        /// <returns></returns>
         public bool Certify(Player player)
         {
             Console.WriteLine($"Certificating {player.Name}......");

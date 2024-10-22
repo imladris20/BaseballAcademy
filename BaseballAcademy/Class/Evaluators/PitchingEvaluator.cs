@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace BaseballAcademy.Class.Evaluators
 {
-    public class PitchingEvaluator
+    /// <summary>
+    /// 投球能力評估單位
+    /// </summary>
+    public class PitchingEvaluator : IEvaluator<Pitcher>
     {
         public bool Evaluate(Pitcher pitcher)
         {
