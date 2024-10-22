@@ -33,5 +33,11 @@ namespace BaseballAcademy.Class
         {
             Console.WriteLine($"{Name} fields a ball.");
         }
+
+        public override void Introduce()
+        {
+            base.Introduce();
+            Console.WriteLine($"I'm an infielder.");
+        }
     }
 }

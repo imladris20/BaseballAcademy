@@ -31,11 +31,10 @@ namespace BaseballAcademy.Class
 
         private BaseballPosition _position;
 
-        public void Introduce()
+        public virtual void Introduce()
         {
             Console.WriteLine($"My name is {Name}.");
             Console.WriteLine($"My back number is {BackNumber}.");
-            Console.WriteLine($"I play as {Position}.");
         }
 
         public void ChangePosition(BaseballPosition newPosition)
