@@ -1,4 +1,5 @@
 ﻿using BaseballAcademy.Class;
+using BaseballAcademy.Enum;
 
 namespace BaseballAcademy;
 
@@ -8,13 +9,13 @@ class Program
     {
         Console.WriteLine("Hello, BaseballAcademy! \n");
 
-        Player cardsfan = new Player("Po-Lien", 29, 1, 70, 75);
+        Player cardsfan = new Player("Po-Lien", 29, BaseballPosition.Pitcher, 70, 75);
 
         cardsfan.Introduce();
-        
+
         Console.WriteLine($"{cardsfan.Position}");
 
-        cardsfan.ChangePosition(8);
+        cardsfan.ChangePosition(BaseballPosition.CenterField);
 
         Console.WriteLine($"{cardsfan.Position}");
 

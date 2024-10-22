@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BaseballAcademy.Enum;
 
 namespace BaseballAcademy.Class
 {
     public class Player
     {
-        public Player(string name, int backNumber, int position, int power, int speed)
+        public Player(string name, int backNumber, BaseballPosition position, int power, int speed)
         {
             Name = name;
             _position = position;
@@ -18,7 +19,7 @@ namespace BaseballAcademy.Class
 
         public string? Name { get; set; }
 
-        public int Position
+        public BaseballPosition Position
         {
             get { return _position; }
         }
@@ -34,7 +35,7 @@ namespace BaseballAcademy.Class
 
         private int _backNumber;
 
-        private int _position;
+        private BaseballPosition _position;
 
         public void Introduce()
         {
@@ -44,7 +45,7 @@ namespace BaseballAcademy.Class
             Console.WriteLine($"My power is {Power} and my speed is {Speed}.");
         }
 
-        public void ChangePosition(int newPosition)
+        public void ChangePosition(BaseballPosition newPosition)
         {
             _position = newPosition;
         }
