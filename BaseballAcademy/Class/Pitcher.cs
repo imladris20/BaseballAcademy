@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BaseballAcademy.Enum;
+using BaseballAcademy.Interface;
 
 namespace BaseballAcademy.Class
 {
-    public class Pitcher : Player
+    public class Pitcher : Player, IPitchable
     {
         public Pitcher(string name, int backNumber) : base(name, backNumber, BaseballPosition.Pitcher)
         { }

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BaseballAcademy.Enum;
+using BaseballAcademy.Interface;
 
 namespace BaseballAcademy.Class
 {
 
-    public class Infielder : Player
+    public class Infielder : Player, IFieldable
     {
 
         private static readonly HashSet<BaseballPosition> infielderPositions = new HashSet<BaseballPosition>
